@@ -1,0 +1,12 @@
+<?php
+session_start();
+if(isset($_GET['q'])&&$_GET['q']=="logout"&&isset($_SESSION['login_id'])){
+session_destroy();
+header("location:./");
+die;
+}
+else
+{
+	header("location:./");
+}
+?>
